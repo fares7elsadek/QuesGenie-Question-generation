@@ -1,0 +1,6 @@
+*.ckpt
+s2v_old
+/.idea
+/venv
+__pycache__
+BERT-WSD
