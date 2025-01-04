@@ -4,7 +4,7 @@ from typing import List
 
 class Sense2VecDistractorGeneration():
     def __init__(self):
-        self.s2v = Sense2Vec().from_disk('app/models/sense2vec_distractor_generation/data/s2v_old')
+        self.s2v = Sense2Vec().from_disk('app/models/mcq_question_models/app/models/sense2vec_distractor_generation/data/s2v_old')
 
     def generate(self, answer: str, desired_count: int) -> List[str]:
         distractors = []

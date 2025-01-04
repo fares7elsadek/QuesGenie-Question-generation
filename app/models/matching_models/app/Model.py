@@ -2,11 +2,11 @@ import torch
 import math
 from transformers import BertModel, BertConfig, BertPreTrainedModel, BertTokenizer
 from collections import namedtuple
-from app.Modules.process import _create_features_from_records
+from app.models.matching_models.app.Modules.process import _create_features_from_records
 import re
 from nltk.corpus import wordnet as wn
 from torch.nn.functional import softmax
-from app.Preprocessing import *
+from app.models.matching_models.app.Preprocessing import *
 import statistics
 from statistics import mode
 import re
@@ -32,7 +32,7 @@ class BertWSD(BertPreTrainedModel):
 class MatchingQuestions():
     def __init__(self,text,num_words=10):
         self.text = text
-        self.model_dir = "app/Model/BERT-WSD"
+        self.model_dir = "app/models/matching_models/app/Model/BERT-WSD"
         self.model = BertWSD.from_pretrained(self.model_dir)
         self.tokenizer = BertTokenizer.from_pretrained(self.model_dir)
         self.tokenizer.added_tokens_encoder['[TGT]'] = 100

@@ -69,7 +69,7 @@ class QuestionGenerator():
         self.tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
         self.tokenizer.add_tokens(SEP_TOKEN)
         self.tokenizer_len = len(self.tokenizer)
-        checkpoint_path = 'app/models/answer_generation/model/mc-checkpoints-v4.ckpt'
+        checkpoint_path = 'app/models/mcq_question_models/app/models/question_generation/Model/mc-checkpoints-v4.ckpt'
         self.qg_model = QGModel.load_from_checkpoint(checkpoint_path)
         self.qg_model.freeze()
         self.qg_model.eval()

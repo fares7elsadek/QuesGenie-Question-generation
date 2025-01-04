@@ -2,7 +2,7 @@ import string
 import re
 import string
 import pke
-from app.Preprocessing import *
+from app.models.fill_in_the_blank_models.app.Preprocessing import *
 from nltk.corpus import stopwords
 import traceback
 
@@ -36,7 +36,7 @@ class FillInTheBlankModel():
         return output
     
     def get_sentence_for_keyword(self):
-        keywords = self.get_noun_adj_verb(self.text)
+        keywords = self.get_noun_adj_verb()
         sentences = self.sentences
         keyword_processor = KeywordProcessor()
         keyword_sentences = {}

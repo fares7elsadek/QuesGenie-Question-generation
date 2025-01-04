@@ -64,7 +64,7 @@ class QGModel(pl.LightningModule):
 class AnswerGenerator():
     def __init__(self):
         self.tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
-        check_point_path = 'MCQ-Question-Generation/app/models/answer_generation/model/mc-checkpoints-v4.ckpt'
+        check_point_path = 'app/models/mcq_question_models/app/models/question_generation/Model/mc-checkpoints-v4.ckpt'
         self.ag_model = QGModel.load_from_checkpoint(check_point_path)
         self.ag_model.freeze()
         self.ag_model.eval()

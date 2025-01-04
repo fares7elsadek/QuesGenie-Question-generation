@@ -76,7 +76,7 @@ class DistractorGenerator():
         self.tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
         self.tokenizer.add_tokens(SEP_TOKEN)
         self.tokenizer_len = len(self.tokenizer)
-        checkpoint_path = 'app/models/distractor_generation/model/Distractor-generation-checkpoints-v4.ckpt'
+        checkpoint_path = 'app/models/mcq_question_models/app/models/distractor_generation/Model/Distractor-generation-checkpoints-v4.ckpt'
         self.dg_model = QGModel.load_from_checkpoint(checkpoint_path)
         self.dg_model.freeze()
         self.dg_model.eval()

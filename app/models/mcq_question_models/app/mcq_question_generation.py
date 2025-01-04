@@ -1,16 +1,17 @@
 from typing import List
 from nltk.tokenize import sent_tokenize
 import toolz
-from app.modules.duplicate_removal import remove_distractors_duplicate_with_correct_answer, remove_duplicates
-from app.modules.text_cleaning import clean_text
-from app.models.answer_generation.answer_generation import AnswerGenerator
-from app.models.distractor_generation.distractor_generation import *
-from app.models.question_generation.question_generation import *
-from app.models.sense2vec_distractor_generation.sense2vec import *
+from app.models.mcq_question_models.app.modules.duplicate_removal import remove_distractors_duplicate_with_correct_answer, remove_duplicates
+from app.models.mcq_question_models.app.modules.text_cleaning import clean_text
+from app.models.mcq_question_models.app.models.answer_generation.answer_generation import AnswerGenerator
+from app.models.mcq_question_models.app.models.distractor_generation.distractor_generation import *
+from app.models.mcq_question_models.app.models.question_generation.question_generation import *
+from app.models.mcq_question_models.app.models.sense2vec_distractor_generation.sense2vec import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import wordnet
-from app.models.question import Question
+from app.models.mcq_question_models.app.models.question import Question
 import time
+
 
 
 
